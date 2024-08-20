@@ -4,10 +4,6 @@
   gather_facts: false
 
   tasks:
-    - name: Print the vaulted message
+    - name: Print variable event set by rulebook engine
       ansible.builtin.debug:
-        msg: "Vault message: {{ vault_msg }}"
-
-    - name: Print template name
-      ansible.builtin.debug:
-        msg: "Your job template variable: {{ job_template_name }}"
+        msg: '{{ ansible_eda.event }}'
