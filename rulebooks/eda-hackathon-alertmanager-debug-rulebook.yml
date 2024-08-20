@@ -16,5 +16,3 @@
           job_args:
             extra_vars:
               job_template_name: "{{ job_template_name }}"
-          debug:
-            var: job_template_name
